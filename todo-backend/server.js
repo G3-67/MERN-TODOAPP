@@ -31,26 +31,6 @@ const todoSchema = new mongoose.Schema({
 
 //creating model
 const todoModel = mongoose.model('Todo', todoSchema);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Create a new todo item
 app.post('/todos', async (req, res) => {
     const {title, description} = req.body;
@@ -116,23 +96,8 @@ app.delete('/todos/:id', async (req, res) => {
     } catch (error) {
         console.log(error)
         res.status(500).json({message: error.message});
-    }
-   
+    } 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const port=8000;
 app.listen(port,()=>{
     console.log("Server is listening to port",port)
