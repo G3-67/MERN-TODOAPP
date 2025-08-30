@@ -7,9 +7,8 @@ app.use(express.json())
 app.use(cors())
 //Define a route
 app.get('/',(req,res)=>{
-    res.send("Hello world")
+    res.send("Hello orld")
 })
-
 
 // connecting mongodb
 mongoose.connect('mongodb://localhost:27017/mern-app')
